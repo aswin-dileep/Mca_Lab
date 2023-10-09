@@ -154,7 +154,7 @@ void search(){
         temp=head;
         while(temp!=NULL){
             if(temp->data==n){
-                printf("\n Found at %d position");
+                printf("\n Found at %d position",pos);
                 flag++;
                
                 break;
@@ -173,7 +173,7 @@ void deleteP(){
         printf("\n Empty List");
     else{
         int pos,count=1;
-        printf("\n Enter the position to be inserted :");
+        printf("\n Enter the position to Delete :");
         scanf("%d",&pos);
         if(pos>noOfNode){
             printf("\n Invalid Position ");

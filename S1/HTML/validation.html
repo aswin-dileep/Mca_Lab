@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function show() {
+                    
+            let name = document.forms["myform"]["fname"].value;
+            let address =document.forms["myform"]["address"].value;
+            let gender = document.forms["myform"]["gender"].value;
+            let dob = document.forms["myform"]["dob"].value;
+            let phone = document.forms["myform"]["pho"].value
+
+            if (name == "") {
+                alert("Name must be filled ");
+                fname.focus();
+                return false;
+            }
+            if (address == "") {
+                alert("Address field can't make empty");
+                address.focus();
+                return false;
+            }
+            if (gender == "") {
+                alert("Agender should be selected");
+
+                return false;
+            }
+            if (dob == "") {
+                alert("Date of birth is necessary");
+                return false;
+            }
+            if (phone == "") {
+                alert("It should have a phone number ");
+                return false;
+            }
+                
+           
+
+        }
+    </script>
+    <form id="myform"  action="prg.html" onsubmit="return show()">
+        <table border="2px" align="center">
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        Registration form
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="">Enter the Name</label>
+                    </td>
+                    <td>
+                        <input type="text" name="fname" id="fname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Gender</label>
+                    </td>
+                    <td>
+                        <select name="gender" id="gender">
+                            <option value="">Select:</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Date of birth</label>
+                    </td>
+                    <td>
+                        <input type="date" name="dob" id="dob">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Address</label>
+                    </td>
+                    <td>
+                        <textarea name="address" id="address" cols="6" rows="6"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Phone number</label>
+                    </td>
+                    <td>
+                        <input type="text" name="pho" id="pho">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="">Hobbies</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="c1">Cricket <br>
+                        <input type="checkbox" name="c2"> Ready <br>
+                        <input type="checkbox" name="c3"> Movies <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Extra carricular activites</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="d1">Drawing <br>
+                        <input type="checkbox" name="d2">Painting <br>
+                        <input type="checkbox" name="d3">Dancing <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <input type="Submit" value="Submit" >
+                    </td>
+                    <td>
+                        <input type="submit" value="Reset" onclick="reset()">
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
