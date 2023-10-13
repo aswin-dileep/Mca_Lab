@@ -48,7 +48,7 @@ void main(){
             case 7:
             show();
             break;
-            case 8 :
+            case 8:
             search();
             break;
             case 9:
