@@ -194,7 +194,7 @@ void search(){
         if(temp->data==no){
             printf("\n Found at %d position ",count);
         }else{
-            printf("\n not fount");
+            printf("\n not found");
         }
         
     }

@@ -63,7 +63,7 @@ void deQueue(){
 			f=-1;
 			r=-1;
 		}else{
-			r= (r+1)%SIZE;
+			f= (f+1)%SIZE;
 		}
 	}
 }
@@ -76,7 +76,7 @@ void display(){
 		printf("\n Front -> %d ", f);
     		printf("\n Items -> ");
     		int i =f;
-    		for(i=f;i<r;i=(i+1)%SIZE){  
+    		for(i=f;i!=r;i=(i+1)%SIZE){  
             		printf("%d ", arr[i]);  
             		  
         	}  
