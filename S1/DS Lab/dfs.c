@@ -1,62 +1,32 @@
 #include<stdio.h>
 #include<stdlib.h>
-int q[10],visited[10],i,j,n,edge[10][10],front=1,rear=0,v,item;
-void insert(int v)
-{
-	rear++;
-	q[rear]=v;
+#define MAX 10
+int edge[MAX][MAX],visited[MAX],n;
+
+void dfs(int i){
+    visited[i] =1;
+    printf("%d ",i);
+
+    for(int j=1;j<=n;j++){
+        if(edge[i][j]==1 && visited[j]==0){
+            dfs(j);
+        }
+    }
 }
-int deleteN()
-{
-	v= q[front];
-	front++;
-	return v;
-}
-int main()
-{
-	printf("Total no. of vertices: ");
-	scanf("%d",&n);
-	for(i=1;i<=n;i++)
-		 visited[i]=0;
-	printf("\nIf edge is present assign 1 ,otherwise 0!\n");
-	for(i=1;i<=n;i++)
-	{
-		for(j=i+1;j<=n;j++)
-		{
-			if(i!=j)
-			{
-				printf("Is edge (%d,%d)||edge(%d,%d) exist or not???:",i,j,j,i);
-				scanf("%d",&edge[i][j]);
-				edge[j][i]=edge[i][j];
-			}
-			else
-			 	edge[j][i]=edge[i][j]=0;
-		}
-	}
-	/*for(i=1;i<=n;i++)
-	{
-		for(j=1;j<=n;j++)
-		{
-		printf("%d    ",edge[i][j]);
-		}
-	printf("\n");
-	}*/
-	//printf("\nselect a starting vertex from 1 to  %d:",n);
-	insert(1);
-	for(i=1;i<=n;i++)
-	{
-		item=deleteN();
-		visited[item]=i;
-		for(j=1;j<=n;j++)
-		{
-			if(edge[i][j]==1 && visited[j]==0)
-			{
-				insert(j);
-			}
-		}
-	}
-	printf("\n");
-	for(i=1;i<=n;i++)
-	 printf("%d\n",visited[i]);
-return 0;
+
+void main(){
+    printf("\n Enter the number of vertex :");
+    scanf("%d",&n);
+
+    printf("\n Enter 1 if edge is present else 0 \n");
+
+    for(int i=1;i<=n;i++){
+        for(int j=i+1;j<=n;j++){
+            printf("\n Edge [%d][%d] ||[%d][%d] :",i,j,j,i);
+            scanf("%d",&edge[i][j]);
+            edge[j][i]=edge[i][j];
+        }
+    }
+
+    dfs(1);
 }

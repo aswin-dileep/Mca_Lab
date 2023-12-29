@@ -50,7 +50,7 @@ int main(){
 	c=999;
 		for(i=1;i<=v;i++)
 		{
-			for(j=1;j<=v;j++)
+			for(j=i+1;j<=v;j++)
 			{
 				if(cost[i][j] < c)
 				{
