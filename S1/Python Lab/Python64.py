@@ -2,20 +2,17 @@
 #to findarea and perimeter of respective figures in each sphere with methods to find area
 #find area perimeter of figures by different importing statements
 
-from graphics.circle import *
-from graphics import rectangle,circle
-from graphics.dgraphics import cuboid,sphere
-
-l = int(input("Enter the length of rectangle :"))
-b=int(input("Enter the breadth of rectangle :"))
-c=int(input("Enter the height of cuboid :"))
-r=int(input("Enter the readius :"))
-
-rectangle.area(1,6)
-rectangle.perimeter(1,6)
-cuboid.area(l,b,h)
-cuboid.volume(l,b,h)
-circle.area(r)
-circle.perimeter(r)
-sphere.area(r)
-sphere.volume(r)
+import graphics.rectangle as r
+from graphics.rectangle import perimeter_rect as pr
+from graphics.circle import perimeter_circle as pc,area_circle
+from graphics.dgraphics.cuboid import volume_cuboid as vc,area_cuboid
+from graphics.dgraphics.sphere import volume_sphere as vs,area_sphere as asp
+from graphics import circle
+r.area_rect(2,4)
+pr(2,4)
+pc(3)
+circle.area_circle(3)
+vc(2,3,4)
+area_cuboid(2,3,4)
+vs(4)
+asp(4)

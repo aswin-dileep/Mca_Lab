@@ -20,14 +20,12 @@ class Bank:
             print("New balance of ",self.ac," :",self.b)
 
 
-    def show(self):
-        print("Details")
-        print("Ac no :",self.ac)
-        print("Name :",self.n)
+    def __str__(self):
+        return "Ac no :"+str(self.ac)+"Name :"+str(self.n)
         print("Type :",self.t)
         print("Balance :",self.b)
 
 c1=Bank(11,'Aswin','Savings')
-c1.show()
+print(c1)
 c1.deposit(1000)
 c1.withdraw(600)

@@ -80,6 +80,20 @@ void postorderTraversal(struct Node *root) {
     }
 }
 
+void search(struct Node *root,int data){
+   
+    if(root==NULL){
+        printf("\n Not founded");
+    }else if(data>root->data)
+        search(root->right,data);
+    else if(data<root->data)
+        search(root->left,data);
+    else if(data==root->data){
+        printf("\n founded");
+    }
+
+}
+
 void displayMenu() {
     printf("\nMenu:\n");
     printf("1. Insert\n");
@@ -87,7 +101,8 @@ void displayMenu() {
     printf("3. Inorder Traversal\n");
     printf("4. Preorder Traversal\n");
     printf("5. Postorder Traversal\n");
-    printf("6. Exit\n");
+    printf("6.Search\n");
+    printf("7. Exit\n");
     printf("Enter your choice: ");
 }
 
@@ -126,8 +141,12 @@ int main() {
                 printf("\n");
                 break;
             case 6:
-                printf("Exiting the program.\n");
+                printf("\n Enter the number to search :");
+                scanf("%d",&value);
+                search(root,value);
                 break;
+            case 7:
+                exit(0);
             default:
                 printf("Invalid choice. Please enter a valid option.\n");
         }

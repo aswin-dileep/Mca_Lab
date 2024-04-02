@@ -5,7 +5,7 @@ outf= False
 
 try:
     inf = open('inf.txt')
-    print("Inpt file")
+    print("Input file")
     print(inf.read())
     inf.seek(0,0)
     line = inf.readlines()

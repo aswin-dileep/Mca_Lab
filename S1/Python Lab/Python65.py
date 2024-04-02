@@ -20,10 +20,17 @@ class Rectangle:
             print("Same area")
         else:
             print("Not same area ")
+    def __str__(self):
+        return "length "+str(self.l)+" bredth "+str(self.b)
 
 r1=Rectangle(5,10)
 r2=Rectangle(50,2)
+
+print(r1)
+
 print("area of r1 =",r1.area())
 print("Area of r2 =",r2.area())
 print("perimeter of r1 = ",r1.perimeter())
 print("perimeter of r2 =",r2.perimeter())
+
+r1==r2

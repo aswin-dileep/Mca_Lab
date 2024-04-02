@@ -6,6 +6,7 @@ class Rectangle:
         self.l=l
         self.w=w
         self.a=l*w
+    
     def __gt__(self,other):
         if self.a<other.a:
             return True

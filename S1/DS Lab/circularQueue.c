@@ -77,7 +77,7 @@ void display(){
     		printf("\n Items -> ");
     		int i =f;
     		for(i=f;i!=r;i=(i+1)%SIZE){  
-            		printf("%d ", arr[i]);  
+            		printf("%d ",arr[i]);  
             		  
         	}  
     			printf("%d ",arr[i]);
