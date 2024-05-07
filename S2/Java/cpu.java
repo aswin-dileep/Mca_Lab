@@ -16,8 +16,8 @@ class cpu
 		}
 		void pdisplay()
 		{
-			System.out.println("no of cores:"+noofcores);
-			System.out.println("processor manufacturer:"+manufacturer);
+			System.out.println("no of cores: "+noofcores);
+			System.out.println("processor manufacturer: "+manufacturer);
 		}
 	}
 	static class ram

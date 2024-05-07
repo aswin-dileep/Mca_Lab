@@ -5,7 +5,7 @@ class stringmanip
 	public static void main(String arg[])
 	{
 	          String str[]=new String[40];
-		String s = "         Hello-Aswin";
+		String s = "Hello-Aswin";
 		System.out.println("Original string :"+s);
 		System.out.println("character at index 0 :"+s.charAt(0));
 		System.out.println("substring from index 6 :"+s.substring(6));
