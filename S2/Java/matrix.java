@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 class matrix
 {
 	int r,c;
@@ -20,6 +21,7 @@ class matrix
 		}
 		
 	}
+	
 	void display()
 	{
 		int i,j;
@@ -33,6 +35,7 @@ class matrix
 		}
 	}
 }
+
 class matrixtest
 {
 	public static matrix add(matrix a,matrix b)
