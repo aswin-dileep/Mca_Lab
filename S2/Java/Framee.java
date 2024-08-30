@@ -12,11 +12,13 @@ public class  Framee extends Frame implements ActionListener
 		t2=new TextField(20);
 		t3=new TextField(20);
 		t4=new TextField(20);
+
 		l1=new Label("number 1");
 		l2=new Label("number 2");
 		l3=new Label("number 3");
 		l4=new Label("Result");
 		b=new Button("check");
+		
 		add(l1);
 		add(t1);
 		add(l2);
